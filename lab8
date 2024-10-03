@@ -1,0 +1,66 @@
+<?php
+class date {
+    //properties 
+    public int $day;
+    public int $month;
+    public int $year; 
+
+}
+
+
+function set_day($day) {
+    $this->day = $day;
+  }
+function set_month($month) {
+    $this->month = $month;
+  }
+function set_year($year) {
+    $this->year = $year;
+  }
+
+function short(){
+    return sprintf("%02d/%02s/%02d/", $this->day, $this->month, $this->year)
+}
+
+
+
+
+
+
+?>
+
+
+e. A method returning a string representation of the date in short form, e.g.
+“19/8/20”
+f. A method returning a string representation of the date in long form, e.g.
+“19th August 2020”
+g. A method returning a Boolean value if the year is a leap year
+h. A method that increments the date by one day
+
+<!DOCTYPE html>
+<html lng = "en">
+<head>
+    <title>LAB 8</title>
+</head>
+<body>
+    <h1> Enter date </h1>
+    <br>
+    <label for="day"> Enter a day</label>
+    <input required type="number" id="day" name="day" min= "1" max ="31">
+    <br>
+    <label for="month"> Enter a month</label>
+    <input required type="number" id="month" name="month" min= "1" max ="12">
+    <br>
+    <label for="year"> Enter a year</label>
+    <input required type="number" id="year" name="year" min= "1">
+    <br>
+    
+
+
+</body>
+
+</html>
+
+
+
+
