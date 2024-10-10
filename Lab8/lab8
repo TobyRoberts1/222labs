@@ -1,0 +1,106 @@
+<?php
+public class date {
+    //properties 
+    private int $day;
+    private int $month;
+    private int $year; 
+
+}
+
+public function __construct($day, $month, $year){
+  $this->(set_day: $day);
+  $this->(set_month: $month);
+  $this->(set_year: $year);
+}
+
+
+
+public function set_day($day) {
+    $this->day = $day;
+}
+public function set_month($month) {
+    $this->month = $month;
+}
+public function set_year($year) {
+    $this->year = $year;
+}
+
+public function short():String{
+    return sprintf("%02d/%02s/%02d/", $this->day, $this->month, $this->year);
+}
+
+//to return the date in long form
+public function longDate():String{
+    // get the day 
+    $suffix = $this-> getSuffix(day : this->$day)
+    // array to hold all the months and what num they corrispond to 
+    $months = array[
+      1 => "January", 2 => "February", 3 => "March", 4 => "April", 5 => "May", 6 => "June", 7 => "July", 8 => "August", 9 => "September", 10 => "October", 11 => "November", 12 => "December"
+    ];
+    return sprintf(format: "%d%s %s %d", $this->day, $suffix, $months[$this->month], $this->year)
+}
+
+public function getSuffix( int $day): String{
+  if($day = 1){ return "st"}
+  if($day = 2){ return "nd"}
+  if($day = 3){ return "rd"}
+  return "th"; 
+
+}
+
+
+// To check if it is a leap year. 
+public function leapYear(): bool{
+  return ($this->year % 4 == 0 && $this->year%100 != 0) || ($this->year % 400 == 0)
+}
+
+// increments the date by one day
+public function increment(){
+  $daysPerMonth = [31, 28, 31, 30, 31, 30, 31, 31 31, 31, 30, 31]
+
+  if leapYear()
+
+
+}
+
+
+
+
+
+?>
+
+
+e. A method returning a string representation of the date in short form, e.g.
+“19/8/20”
+f. A method returning a string representation of the date in long form, e.g.
+“19th August 2020”
+g. A method returning a Boolean value if the year is a leap year
+h. A method that increments the date by one day
+
+<!DOCTYPE html>
+<html lng = "en">
+<head>
+    <title>LAB 8</title>
+</head>
+<body>
+    <h1> Enter date </h1>
+    <br>
+    <label for="day"> Enter a day</label>
+    <input required type="number" id="day" name="day" min= "1" max ="31">
+    <br>
+    <label for="month"> Enter a month</label>
+    <input required type="number" id="month" name="month" min= "1" max ="12">
+    <br>
+    <label for="year"> Enter a year</label>
+    <input required type="number" id="year" name="year" min= "1">
+    <br>
+    
+
+
+</body>
+
+</html>
+
+
+
+
